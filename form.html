@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML From</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: lightblue;
+            width: 50%;
+        }
+
+        input, textarea {
+            height: 30px;
+            width: 90%;
+            padding: 3px 8px;
+            border: 0;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        textarea {
+            height: 90px;
+        }
+        h2 {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            color: black;
+        }
+
+        #line {
+            border: 1px solid white;
+            margin-bottom: 15px;
+            width: 90%;
+        }
+        button {
+            width: 93%;
+            height: 40px;
+            border: 0;
+            background-color: green;
+            border: 0;
+            color: white;
+        }
+
+        .genderD {
+            height:15px;
+            width:40px; 
+            vertical-align: center;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <form action="submit">
+        <h2>Student Registeration Form</h2>
+        <p id="line"></p>
+        
+        <p>First Name</p>
+        <input type="text" id="form" placeholder="Enter First Name..." name="FirstN" required>
+        <p>Middle Name</p >
+        <input type="text" id="form" placeholder="Enter Middle Name..." name="MiddleN" required>
+        <p>Last Name</p>
+        <input type="text" id="form" placeholder="Enter Last Name..." name="LastN" required>
+
+        <br>
+        <label>Gender</label><input type="radio" name="gender" class="genderD">Male<input type="radio" name="gender" class="genderD">FeMale
+        
+        <br>
+        <label>Courses : </label>
+        <select required>
+            <option>Course</option>
+            <option>Geometry</option>
+            <option>Biology</option>
+            <option>Math</option>
+            <option">Pashto</option>
+            <option>Dari</option>
+        </select>
+
+        <p>Phone : </p>
+        <input type="number" id="form" placeholder="+91" name="PhoneNum" required><br>
+        <input type="number" id="form" placeholder="Enter Phone number..." name="PhoneNum2" required><br>
+
+        <p>Current Address : </p>
+        <textarea id="textarea" name="adress" required placeholder="current Adress"></textarea>
+
+        <p>Email</p>
+        <input type="email" id="form" name="email" placeholder="Enter Email..." required>
+
+        <p>Password</p>
+        <input type="password" id="form" name="password" placeholder="Enter Password..." pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*" required>
+
+        <p>Re-type Password</p>
+        <input type="password" id="form" name="RetypePassword" placeholder="Retype Password" pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*" required>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
